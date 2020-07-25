@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blogapps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogapps.each do |blogapp| %>
+      <tr>
+        <td><%= link_to 'Show', blogapp %></td>
+        <td><%= link_to 'Edit', edit_blogapp_path(blogapp) %></td>
+        <td><%= link_to 'Destroy', blogapp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blogapp', new_blogapp_path %>
